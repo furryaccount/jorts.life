@@ -37,9 +37,9 @@
                         let img = document.createElement('img')
                         img.src = `jorts/jorts${Math.ceil(Math.random() * 8)}.jpg`
                         img.style.setProperty('position', 'absolute')
-                        img.style.setProperty('width', `${(Math.random() * 300) + 200}px`)
-                        img.style.setProperty('top', `${Math.random() * 100}%`)
-                        img.style.setProperty('left', `${Math.random() * 100}%`)
+                        img.style.setProperty('width', `${(Math.random() * 70) + 5}%`)
+                        img.style.setProperty('top', `${(Math.random() * 100) - 25}%`)
+                        img.style.setProperty('left', `${(Math.random() * 100) - 25}%`)
                         img.style.setProperty('transform', `rotate(${(Math.random() * 360)-180}deg`)
                         body.appendChild(img)
                         imgLoop()
