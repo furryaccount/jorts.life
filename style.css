@@ -1,0 +1,50 @@
+body, html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-position: center;
+    background: #200 radial-gradient(circle, #ddf 0.5%, #222 0.5%) center/30000%;
+    transition: background 7s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.pre-ripple {
+    background-color: #ddf;
+    background-size: 100%;
+    transition: background 0s !important;
+}
+
+#welcome {
+    position: absolute;
+    pointer-events: none;
+    color: #222;
+    display: block;
+    opacity: 0;
+    font-family: cortado, sans-serif;
+    font-size: 85px;
+    margin-left: 50px;
+}
+
+body.JORTS #welcome {
+    opacity: 1;
+}
+
+#enter {
+    display: block;
+    border: 5px solid white;
+    font-size: 60px;
+    padding: 8px 20px;
+    font-family: stratos-lights, sans-serif;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: opacity 7s;
+}

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JORTS LIFE</title>
+        <link rel="stylesheet" href="https://use.typekit.net/aud6kga.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js" ></script>
+    </head>
+    <body id="body" class="pre-ripple">
+        <script type="text/javascript">
+            const jorts = new Howl({
+                src: ['jorts jorts.ogg'],
+                autoplay: false,
+                loop: true
+            });
+            const swell = new Howl({
+                src: ['swell.mp3']
+            })
+            function onEnter() {
+                const body = document.getElementById('body')
+                const enter = document.getElementById('enter')
+                swell.play()
+                body.classList.remove('pre-ripple')
+                enter.style.setProperty('opacity', 0)
+                swell.on('end', () => {
+                    setTimeout(() => {
+                        body.removeChild(enter)
+                        JORTSTIMEBABEY()
+                    }, 500);
+                })
+            }
+            function JORTSTIMEBABEY() {
+                jorts.play()
+                const body = document.getElementById('body')
+                body.classList.add('JORTS')
+                function imgLoop() {
+                    setTimeout(() => {
+                        let img = document.createElement('img')
+                        img.src = `jorts/jorts${Math.ceil(Math.random() * 8)}.jpg`
+                        img.style.setProperty('position', 'absolute')
+                        img.style.setProperty('width', `${(Math.random() * 300) + 200}px`)
+                        img.style.setProperty('top', `${Math.random() * 100}%`)
+                        img.style.setProperty('left', `${Math.random() * 100}%`)
+                        img.style.setProperty('transform', `rotate(${(Math.random() * 360)-180}deg`)
+                        body.appendChild(img)
+                        imgLoop()
+                    }, 1000);
+                }
+                imgLoop();
+            }
+
+        </script>
+        <div onclick="onEnter()" id="enter">enter jorts life</div>
+        <!-- <h1 id="welcome">Welcome to jorts life.</h1> -->
+    </body>
+</html>
