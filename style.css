@@ -22,20 +22,20 @@ body.pre-ripple {
     transition: background 0s !important;
 }
 
-#welcome {
-    position: absolute;
-    pointer-events: none;
-    color: #222;
-    display: block;
-    opacity: 0;
-    font-family: cortado, sans-serif;
-    font-size: 85px;
-    margin-left: 50px;
-}
+// #welcome {
+//     position: absolute;
+//     pointer-events: none;
+//     color: #222;
+//     display: block;
+//     opacity: 0;
+//     font-family: cortado, sans-serif;
+//     font-size: 85px;
+//     margin-left: 50px;
+// }
 
-body.JORTS #welcome {
-    opacity: 1;
-}
+// body.JORTS #welcome {
+//     opacity: 1;
+// }
 
 #enter {
     display: block;
