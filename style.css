@@ -8,7 +8,7 @@ body, html {
 
 body {
     background-position: center;
-    background: #200 radial-gradient(circle, #ddf 0.5%, #222 0.5%) center/30000%;
+    background: #200 radial-gradient(circle, #ddf 0.5%, #222 0.5%) center/50000%;
     transition: background 7s ease-in;
     display: flex;
     align-items: center;
@@ -46,5 +46,5 @@ body.pre-ripple {
     background-color: #222;
     color: white;
     cursor: pointer;
-    transition: opacity 7s;
+    transition: opacity 6s;
 }
